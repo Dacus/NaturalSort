@@ -41,20 +41,18 @@ public class NaturalSorter {
                     case "asymbol":
                     case "word":
                         int compareResult = firstString.toLowerCase().compareTo(secondString.toLowerCase());
-                        if (compareResult == 0) {
-                            break;
-                        } else {
+                        if (compareResult != 0) {
                             return compareResult;
                         }
+                        break;
                     case "number":
                         Integer firstNumber = Integer.valueOf(firstString);
                         Integer secondNumber = Integer.valueOf(secondString);
                         int numberResult = firstNumber.compareTo(secondNumber);
-                        if (numberResult == 0) {
-                            break;
-                        } else {
+                        if (numberResult != 0) {
                             return numberResult;
                         }
+                        break;
                 }
             }
 
